@@ -1,1 +1,1 @@
-Teste GITHUB de pull
+Repositório com a finalidade de submeter os exercícios do projeto Codando Talentos
