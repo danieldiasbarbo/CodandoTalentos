@@ -7,7 +7,7 @@
     <title>Primeiro Teste</title>
 </head>
 <body>
-    <h1>Titulo principal</h1>
+    <h1 id="titulo">Titulo principal</h1>
 <!-- #region subtítulos, paragrafo, citação, formatação de texto -->
 
 <h2>Para manter identação usar pre</h2>
@@ -29,6 +29,8 @@
         <p>Usa-se o em para <em>enfatizar algo</em> e também será mostrado em itálico</p>
         <p>Usa-se o mark para enfatizar <mark>algo</mark></p>
 <!-- #endregion-->
+
+<!-- #region Listas e imagens-->
     <h2>Listas ordenadas (ol) e não ordenadas (ul)</h2>
     <p>Exemplos de listas</p>
     <ol reversed>
@@ -48,12 +50,22 @@
         <li>Tomate</li>
     </ul>
 
-<!-- #region Listas e tabelas-->
-
+    <h2>Imagens</h2>
+    <p>Adicionando uma imagem ao website</p>
+    <img src="images/controle.png" alt="Gráfico ilustrando a ação de controle de um sistema dinâmico para um controlador PID" title="Gráfico PID" width="640" height="480">
+    <p>Adicionando uma imagem com legenda (figure)</p>
+    <figure>
+        <img src="images/planta.png" alt="Gráfico ilustrando uma resposta a uma entrada do tipo degrau" title="Gráfico planta" width="640" height="480">
+        <figcaption>Resposta de um sistema de segunda ordem a uma entrada do tipo degrau</figcaption>
+    </figure>
 <!-- #endregion-->
+
+        <a href="#titulo">Ir para o início</a> <br>
         <address>
         Daniel Dias Barbosa <br>
-        (34) 99835 3971 <br>
+        <a href="mailto:danieldiasbarbo@gmail.com">danieldiasbarbo@gmail.com</a> <br>
+        <a href="https://github.com/danieldiasbarbo" target="_blank">GitHub</a> <br>
+        <a href="tel:+5534998353971">(34) 99835 3971</a> <br>
         <abbr title="Universidade Federal de Uberlandia">UFU</abbr>
     </address>
 </body>
