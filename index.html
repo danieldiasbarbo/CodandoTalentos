@@ -27,10 +27,13 @@
     <h2>Itálico e enfase</h2>
         <p>Usa-se o i para palavras de outros idiomas, <i>termos técnicos</i>, taxonomia etc</p>
         <p>Usa-se o em para <em>enfatizar algo</em> e também será mostrado em itálico</p>
-        <p>Usa-se o mark para enfatizar <mark>algo</mark></p>
+        <p>Usa-se o mark para enfatizar grifando <mark>algo</mark></p>
 <!-- #endregion-->
-
-<!-- #region Listas e imagens-->
+    <div>
+        <p><strong>Atenção:</strong> Estou apenas aprendendo a utilizar html e esse é um elemento de bloco que quero destacar!</p>
+        <p>Aqui seria um texto longo explicando os motivos Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo commodi deleniti tenetur architecto in voluptatem exercitationem voluptate porro, similique corrupti.</p>
+    </div>
+<!-- #region Listas, imagens e tabelas-->
     <h2>Listas ordenadas (ol) e não ordenadas (ul)</h2>
     <p>Exemplos de listas</p>
     <ol reversed>
@@ -58,9 +61,45 @@
         <img src="images/planta.png" alt="Gráfico ilustrando uma resposta a uma entrada do tipo degrau" title="Gráfico planta" width="640" height="480">
         <figcaption>Resposta de um sistema de segunda ordem a uma entrada do tipo degrau</figcaption>
     </figure>
+
+    <h2>Tabelas</h2>
+    <p>Para se criar uma tabela, se usa table, tr(table row linha), td (table data), th (célula cabeçalho),
+        thead(Seções de cabeçaljo, corpo e rodapé), tbody(tabelas longas), tfoot(rodapé)
+    </p>
+    <table>
+        <thead>
+            <tr>
+                <th>Aluno</th>
+                <th colspan="2">Notas</th>   
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>Daniel</td>
+                <td>10</td>
+                <td>9</td>
+            </tr>
+            <tr>
+                <td>Matheus</td>
+                <td>9</td>
+                <td>10</td>
+            </tr>
+        </tbody>
+
+        <tfoot>
+            <tr>
+                <th>Média</th>
+                <td>9,5</td>
+                <td>9,5</td>
+            </tr>
+        </tfoot>
+    </table>
+
 <!-- #endregion-->
 
         <a href="#titulo">Ir para o início</a> <br>
+        <a href="iframe_test.html">iframe</a>
         <address>
         Daniel Dias Barbosa <br>
         <a href="mailto:danieldiasbarbo@gmail.com">danieldiasbarbo@gmail.com</a> <br>
