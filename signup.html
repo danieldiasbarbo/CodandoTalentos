@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GAFio</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <table style="width: 100%;">
+            <tr>
+                <th style="text-align: left; padding-left: 2%;">
+                    <a class="logo" href="index.html" style="font-size: 4em;"><b>GAFio</b></a>
+                </th>
+                <th style="text-align: right;">
+                    <a href="index.html"><img src="images/fiocruz.png" alt="ícone fiocruz" width="750" height="420" class="cabecalho" style="width: 10em; height: auto;"></a></th>
+                </th>
+            </tr>
+        </table>
+    </header>
+
+    <div id="formulario">
+        <form action="signup.php" method="POST" style="padding-top: 1em; padding-bottom: 0.5em;">
+        
+            <div class="campo" style="padding: 0.5em 0em;">
+                <label for="nome">Nome completo</label>
+                <br>
+                <input type="text" name="nome" id="nome" placeholder="insira seu nome">
+            </div>
+    
+            <div class="campo" style="padding: 0.5em 0em;">
+                <label for="email">Email:</label>
+                <br>
+                <input type="text" name="email" id="email" placeholder="insira seu e-mail">
+            </div>
+    
+            <div class="campo" style="padding: 0.5em 0em;">
+                <label for="senha">Senha:</label>
+                <br>
+                <input type="password" name="senha" id="senha" placeholder="insira sua senha">
+            </div>
+    
+            <button type="submit">Entrar</button>
+            <button type="reset">Limpar</button>
+        </form>
+    </div>
+
+    <footer>
+        <div style="text-align: center;">
+            <a class="logo" href="https://github.com/danieldiasbarbo" target="_blank" style="text-align: center;">     
+                <b>danieldiasbarbo</b>
+                <img src="images/github.png" alt="ícone github" style="height: 1em; width: auto">
+            </a>
+        </div>
+    </footer>
+</body>
+</html>
