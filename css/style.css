@@ -13,6 +13,18 @@ footer {
   color: white;
   border-radius: 5px;
 }
+section {
+  background-color: white;
+  text-align: left;
+  color: black;
+  margin-left: 30%;
+  margin-right: 30%;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  border-radius: 10px;
+  padding: 2em;
+  font-family: inherit;
+}
 button {
   font: inherit;
   background-color: #99d3df;
@@ -28,6 +40,11 @@ button:hover {
 }
 form {
   text-align: center;
+  padding-top: 1em;
+  padding-bottom: 0.5em;
+}
+label {
+  margin-bottom: 1em;
 }
 input {
   width: 95%;
@@ -42,19 +59,9 @@ input {
 .logo {
   text-decoration: none;
   color: white;
+  text-align: center;
 }
 .campo {
   text-align: left;
-}
-#formulario {
-  background-color: white;
-  text-align: left;
-  color: black;
-  margin-left: 50vh;
-  margin-right: 50vh;
-  margin-top: 2em;
-  margin-bottom: 2em;
-  border-radius: 10px;
-  padding: 2em;
-  font-family: inherit;
+  padding: 0.5em 0em;
 }

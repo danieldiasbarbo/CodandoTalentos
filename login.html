@@ -21,18 +21,18 @@
             </tr>
         </table>
     </header>
-    <div id="formulario">
-        <form action="login.php" method="POST" style="padding-top: 1em; padding-bottom: 0.5em;">
-            <div class="campo" style="padding: 0.5em 0em;">
+    <section>
+        <form action="login.php" method="POST">
+            <div class="campo">
                 <label for="email">Email:</label>
                 <br>
-                <input type="text" name="email" id="email" placeholder="insira seu e-mail">
+                <input type="email" name="email" id="email" placeholder="insira seu e-mail" required>
             </div>
     
-            <div class="campo" style="padding: 0.5em 0em;">
+            <div class="campo">
                 <label for="senha">Senha:</label>
                 <br>
-                <input type="password" name="senha" id="senha" placeholder="insira sua senha">
+                <input type="password" name="senha" id="senha" placeholder="insira sua senha" required>
             </div>
     
             <button type="submit">Entrar</button>
@@ -40,7 +40,7 @@
 
             <a href="signup.html">Esqueceu sua senha?</a>
         </form>
-    </div>
+    </section>
     
     <div style="text-align: center;">
         <p>Ainda não está inscito?</p>
@@ -49,7 +49,7 @@
 
     <footer>
         <div style="text-align: center;">
-            <a class="logo" href="https://github.com/danieldiasbarbo" target="_blank" style="text-align: center;">     
+            <a class="logo" href="https://github.com/danieldiasbarbo" target="_blank">     
                 <b>danieldiasbarbo</b>
                 <img src="images/github.png" alt="ícone github" style="height: 1em; width: auto">
             </a>
