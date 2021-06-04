@@ -6,6 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GAFio</title>
     <link rel="stylesheet" href="css/style.css">
+    <script>
+        function validarSenha(){
+            var debugSenha = "";
+            let numeroDebug = 0;
+            let senha = document.getElementById("senha").value;
+            if (senha.length < 7) {
+                if (numeroDebug != 0) {
+                    debugSenha = debugSenha + ", "
+                };
+                debugSenha = debugSenha + "A senha precisa ter pelo menos 8 dígitos"
+                debugSenha = debugSenha + 1
+            };
+            document.getElementById("validadeSenha").innerHTML = debugSenha;
+        }
+    </script>
 </head>
 
 <body>
@@ -33,6 +48,10 @@
                 <label for="senha">Senha:</label>
                 <br>
                 <input type="password" name="senha" id="senha" placeholder="insira sua senha" required>
+                <p id="validadeSenha"></p>
+                <script>
+                    document.getElementById("senha").addEventListener("change", validarSenha)
+                </script>
             </div>
     
             <button type="submit">Entrar</button>
