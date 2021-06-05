@@ -13,10 +13,10 @@
             let senha = document.getElementById("senha").value;
             if (senha.length < 7) {
                 if (numeroDebug != 0) {
-                    debugSenha = debugSenha + ", "
+                    debugSenha = debugSenha + ","
                 };
                 debugSenha = debugSenha + "A senha precisa ter pelo menos 8 dígitos"
-                debugSenha = debugSenha + 1
+                numeroDebug = numeroDebug + 1
             };
             document.getElementById("validadeSenha").innerHTML = debugSenha;
         }
