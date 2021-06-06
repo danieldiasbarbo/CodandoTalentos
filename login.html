@@ -49,11 +49,33 @@
             }
             return errorLog
         }
+        function errorLogMinuscula(texto, errorLog) {
+            console.log("Entrou em errorLogMaiuscula");
+            //Verifica se a senha contém letras maiúsculas
+            let contemMinuscula = false;
+            let i = 0;
+            while (i <= texto.length){
+                let caracter = texto.charAt(i);
+                if (isNaN(caracter * 1)){
+                    if (caracter == caracter.toLowerCase()) {
+                        contemMinuscula = true;
+                        break;
+                    }
+                }
+                i++;
+                console.log("Laço de repetição maiuscula i = ", i);
+            }
+            if (!contemMinuscula) {
+                errorLog = concatenarErroSenha("1 letra minúscula", errorLog)
+            }
+            return errorLog
+        }
         function errorLogSenha(){
             let retornoErrorLogSenha = "";
             let senha = document.getElementById("senha").value;
             retornoErrorLogSenha = errorLogComprimento(senha, retornoErrorLogSenha);
             retornoErrorLogSenha = errorLogMaiuscula(senha, retornoErrorLogSenha);
+            retornoErrorLogSenha = errorLogMinuscula(senha, retornoErrorLogSenha)
             if (retornoErrorLogSenha != 0) {
                 retornoErrorLogSenha += ".";
             }
