@@ -7,18 +7,57 @@
     <title>GAFio</title>
     <link rel="stylesheet" href="css/style.css">
     <script>
-        function validarSenha(){
-            var debugSenha = "";
-            let numeroDebug = 0;
+        function concatenarErroSenha(incremento, errorLog) {
+            console.log("Entrou em concatenarErroSenha");
+            if (errorLog.length == 0) {
+                errorLog = errorLog + "Insira uma senha que tenha pelo menos: <br>" + incremento;
+                console.log("Caso primeiro errorLog");
+            } else {
+                errorLog = errorLog + "<br>" + incremento;
+                console.log("Caso outro errorLog");
+            }
+            console.log("Saiu concatenarErroSenha");
+            return errorLog;
+        }
+        function errorLogComprimento(texto, errorLog) {
+            console.log("Entrou em errorLogComprimento");
+            if (texto.length <= 8) {
+                errorLog = concatenarErroSenha("8 dígitos", errorLog);
+                console.log("Comprimento menor que 8");
+            }
+            console.log("Saiu de errorLogComprimento, error log: ", errorLog);
+            return errorLog;
+        }
+        function errorLogMaiuscula(texto, errorLog){
+            console.log("Entrou em errorLogMaiuscula");
+            //Verifica se a senha contém letras maiúsculas
+            let contemMaiuscula = false;
+            let i = 0;
+            while (i <= texto.length){
+                let caracter = texto.charAt(i);
+                if (isNaN(caracter * 1)){
+                    if (caracter == caracter.toUpperCase()) {
+                        contemMaiuscula = true;
+                        break;
+                    }
+                }
+                i++;
+                console.log("Laço de repetição maiuscula i = ", i);
+            }
+            if (!contemMaiuscula) {
+                errorLog = concatenarErroSenha("1 letra maiúscula", errorLog)
+            }
+            return errorLog
+        }
+        function errorLogSenha(){
+            let retornoErrorLogSenha = "";
             let senha = document.getElementById("senha").value;
-            if (senha.length < 7) {
-                if (numeroDebug != 0) {
-                    debugSenha = debugSenha + ","
-                };
-                debugSenha = debugSenha + "A senha precisa ter pelo menos 8 dígitos"
-                numeroDebug = numeroDebug + 1
-            };
-            document.getElementById("validadeSenha").innerHTML = debugSenha;
+            retornoErrorLogSenha = errorLogComprimento(senha, retornoErrorLogSenha);
+            retornoErrorLogSenha = errorLogMaiuscula(senha, retornoErrorLogSenha);
+            if (retornoErrorLogSenha != 0) {
+                retornoErrorLogSenha += ".";
+            }
+            document.getElementById("validadeSenha").innerHTML = retornoErrorLogSenha;
         }
     </script>
 </head>
@@ -50,7 +89,7 @@
                 <input type="password" name="senha" id="senha" placeholder="insira sua senha" required>
                 <p id="validadeSenha"></p>
                 <script>
-                    document.getElementById("senha").addEventListener("change", validarSenha)
+                    document.getElementById("senha").addEventListener("change", errorLogSenha)
                 </script>
             </div>
     

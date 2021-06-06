@@ -70,3 +70,7 @@ input {
 .campoindex {
   text-align: center;
 }
+#validadeSenha {
+  font-size: 0.9em;
+  color: red;
+}
