@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Codando Textos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="cabecalho">
+        <div class="logo">dan checador</div>
+    </header>
+    <div class="mainContent">
+        <div class="selecaotipo" id="selecaoTipo">
+            <input type="radio" name="selecaoPrincipal" id="compare" value="compare" autocomplete="off" onclick="checkType()"><label class="campoPrincipal" for="compare">Comparar Textos</label>
+            <input type="radio" name="selecaoPrincipal" id="checkLength" value="checkLength" autocomplete="off" onclick="checkType()"><label class="campoPrincipal" for="checkLength">Checar comprimento</label>
+        </div>
+        <br>
+        <div class="comparador">
+            <div class="campoComparador">
+                <textarea name="campo1" id="comparador1" cols="60" rows="10" placeholder="Digite o primeiro texto aqui" onkeyup="checkStrings()"></textarea>
+                <textarea name="campo2" id="comparador2" cols="60" rows="10" placeholder="Digite o segundo texto aqui" onkeyup="checkStrings()"></textarea>
+            </div>
+            <button type="reset">Limpar</button>
+            <div id="resultadoComparador"></div>
+        </div>
+    </div>
+</body>
+<footer class="rodape">
+    <a class="rodapeConteudo" href="https://github.com/danieldiasbarbo" target="_blank">GitHub</a>
+    <a class="rodapeConteudo">&copy; 2021, Daniel Dias</a>
+</footer>
+<script src="script.js"></script>
+</html>
