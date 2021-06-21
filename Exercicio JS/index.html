@@ -25,8 +25,10 @@
         <div class="funcionalidade" id="comparador">
             <div class="radioInput">
                 <div style="margin-right: 1em;">Ignorar letras maíusculas?</div>
-                <input type="radio" name="ignorarMaiuscula" id="ignorarMaiusculaSim" value="ignorarMaiusculaSim" autocomplete="off" onclick="checkStrings()"><label class="campoPrincipal" for="ignorarMaiusculaSim">sim</label>
-                <input type="radio" name="ignorarMaiuscula" id="ignorarMaiusculaNao" value="ignorarMaiusculaNao" checked onclick="checkStrings()"><label class="campoPrincipal" for="ignorarMaiusculaNao">não</label>
+                <input type="radio" name="ignorarMaiuscula" id="ignorarMaiusculaSim" value="ignorarMaiusculaSim" autocomplete="off" onclick="checkStrings()">
+                <label class="campoPrincipal" for="ignorarMaiusculaSim">sim</label>
+                <input type="radio" name="ignorarMaiuscula" id="ignorarMaiusculaNao" value="ignorarMaiusculaNao" checked onclick="checkStrings()">
+                <label class="campoPrincipal" for="ignorarMaiusculaNao">não</label>
             </div>
             <div class="campoComparador">
                 <textarea name="campo1" id="comparador1" cols="60" rows="10" placeholder="Digite o primeiro texto aqui" onkeyup="checkStrings()" maxlength="10000"></textarea>
@@ -48,8 +50,10 @@
             <div class="funcionalidade" id="transformarTexto" style="display: flex;">
                 <div class="radioInput">
                     <div style="margin-right: 1em;">Deseja transformar o texto?</div>
-                    <input type="radio" name="transformarTexto" id="transformarTextoSim" value="transformarTextoSim" autocomplete="off" onclick="transformarTexto()"><label class="campoPrincipal" for="transformarTextoSim">sim</label>
-                    <input type="radio" name="transformarTexto" id="transformarTextoNao" value="transformarTextoNao" checked onclick="transformarTexto()"><label class="campoPrincipal" for="transformarTextoNao">não</label>
+                    <input type="radio" name="transformarTexto" id="transformarTextoSim" value="transformarTextoSim" autocomplete="off" onclick="transformarTexto()">
+                    <label class="campoPrincipal" for="transformarTextoSim">sim</label>
+                    <input type="radio" name="transformarTexto" id="transformarTextoNao" value="transformarTextoNao" checked onclick="transformarTexto()">
+                    <label class="campoPrincipal" for="transformarTextoNao">não</label>
                 </div>
                 <textarea name="saidaTexto" id="textoTransformado" cols="60" rows="10" placeholder="resultado" readonly></textarea>
             </div>
