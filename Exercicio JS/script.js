@@ -2,6 +2,10 @@ function resetSite() {
     document.getElementById("comparador").style.display = "none";
     document.getElementById("checador").style.display = "none";
 }
+function limparTransformar() {
+    document.getElementById("comprimentoId").value = "";
+    transformarTexto();
+}
 function atualizarTela() {
     if (document.getElementById("comparar").checked) {
         limparComparador();
