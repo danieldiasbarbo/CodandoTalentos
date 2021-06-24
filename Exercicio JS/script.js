@@ -1,3 +1,7 @@
+function resetSite() {
+    document.getElementById("comparador").style.display = "none";
+    document.getElementById("checador").style.display = "none";
+}
 function atualizarTela() {
     if (document.getElementById("comparar").checked) {
         limparComparador();
@@ -11,7 +15,38 @@ function atualizarTela() {
 }
 function transformarTexto() {
     var tamanhoComEspaco = document.getElementById("comprimentoId").value.length;
-    document.getElementById("comprimentoResultado").innerText = "Número de caracteres: " + tamanhoComEspaco;
+    var comSaida = document.getElementById("transformarTextoSim").checked;
+    document.getElementById("comprimentoResultado").innerText = "Número de caracteres: " + tamanhoComEspaco + "/" + document.getElementById("comprimentoMaximo").value;
+    var tamanhoSemEspaco = document.getElementById("comprimentoId").value.replace(/ /g, "");
+    tamanhoSemEspaco = tamanhoSemEspaco.length;
+    document.getElementById("comprimentoSemEspaco").innerText = "Número de caracteres sem espaço: " + tamanhoSemEspaco + "/" + document.getElementById("comprimentoMaximo").value;
+    if (tamanhoComEspaco >= document.getElementById("comprimentoMaximo").value) {
+        document.getElementById("resultadoComprimento").innerText = "Fora do permitido"
+        document.getElementById("resultadoComprimento").style.color = "red";
+    }else{
+        document.getElementById("resultadoComprimento").innerText = "Dentro do permitido"
+        document.getElementById("resultadoComprimento").style.color = "green";
+    }
+    if (comSaida) {
+        document.getElementById("transformarTexto").style.display = "flex";
+        if (document.getElementById("none").checked) {
+            document.getElementById("textoTransformado").value = "";
+        }
+        if (document.getElementById("lowerCase").checked) {
+            document.getElementById("textoTransformado").value = document.getElementById("comprimentoId").value.toLowerCase();
+        }
+        if (document.getElementById("upperCase").checked) {
+            document.getElementById("textoTransformado").value = document.getElementById("comprimentoId").value.toUpperCase();
+        }
+        if (document.getElementById("capitalize").checked) {
+            var capitalizado = document.getElementById("comprimentoId").value;
+            capitalizado = capitalizado.charAt(0).toUpperCase() + capitalizado.slice(1).toLowerCase();
+            document.getElementById("textoTransformado").value = capitalizado;
+        }
+    } else {
+        document.getElementById("transformarTexto").style.display = "none";
+    }
+    
 }
 function checkStrings() {
     var texto1 = document.getElementById("comparador1").value;

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
@@ -11,7 +11,7 @@
 
 <body>
     <header class="cabecalho">
-        <div class="logo">dan checador</div>
+        <div class="logo" onclick="resetSite()">dan checador</div>
     </header>
     <div class="mainContent">
 
@@ -47,13 +47,25 @@
 
             <textarea name="textoComprimento" id="comprimentoId" cols="60" rows="10" placeholder="Insira aqui um texto" onkeyup="transformarTexto()" maxlength="10000"></textarea>
             <div id="comprimentoResultado"></div>
-            <div class="funcionalidade" id="transformarTexto" style="display: flex;">
+            <div id="resultadoComprimento"></div>
+            <div id="comprimentoSemEspaco"></div>
+            <div class="radioInput">
+                <div style="margin-right: 1em;">Deseja transformar o texto?</div>
+                <input type="radio" name="transformarTexto" id="transformarTextoSim" value="transformarTextoSim" autocomplete="off" onclick="transformarTexto()">
+                <label class="campoPrincipal" for="transformarTextoSim">sim</label>
+                <input type="radio" name="transformarTexto" id="transformarTextoNao" value="transformarTextoNao" checked onclick="transformarTexto()">
+                <label class="campoPrincipal" for="transformarTextoNao">não</label>
+            </div>
+            <div class="funcionalidade" id="transformarTexto">
                 <div class="radioInput">
-                    <div style="margin-right: 1em;">Deseja transformar o texto?</div>
-                    <input type="radio" name="transformarTexto" id="transformarTextoSim" value="transformarTextoSim" autocomplete="off" onclick="transformarTexto()">
-                    <label class="campoPrincipal" for="transformarTextoSim">sim</label>
-                    <input type="radio" name="transformarTexto" id="transformarTextoNao" value="transformarTextoNao" checked onclick="transformarTexto()">
-                    <label class="campoPrincipal" for="transformarTextoNao">não</label>
+                    <input type="radio" name="tipoTransformacao" id="none" onclick="transformarTexto()">
+                    <label for="none" class="campoPrincipal">none </label>
+                    <input type="radio" name="tipoTransformacao" id="upperCase" onclick="transformarTexto()">
+                    <label for="upperCase" class="campoPrincipal">UPPERCASE </label>
+                    <input type="radio" name="tipoTransformacao" id="lowerCase" onclick="transformarTexto()">
+                    <label for="lowerCase" class="campoPrincipal">lowercase </label>
+                    <input type="radio" name="tipoTransformacao" id="capitalize" onclick="transformarTexto()">
+                    <label for="capitalize" class="campoPrincipal">Capitalize </label>
                 </div>
                 <textarea name="saidaTexto" id="textoTransformado" cols="60" rows="10" placeholder="resultado" readonly></textarea>
             </div>
